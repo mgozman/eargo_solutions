@@ -1,4 +1,4 @@
-// The first solution I came up is totalGain1 function. It works n^2. 
+// The first solution I came up is totalGain1 function. It works O(n^2). 
 // After I'd finished and tested I continued to think if there's better solution.
 // That's why here's one more function totalGain which looks better, works faster and less complicated.
 const totalGain1 = (stocks) => {
