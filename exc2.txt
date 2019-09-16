@@ -6,7 +6,7 @@ Under output table format you need to replace ?? with actual record counts while
 
 Instruction on how to execute code with different test cases:
 
-1. Open Workbench and click Server -> Data Import.
+1. Open MySQL Workbench and click Server -> Data Import.
 2. Click import from Disk and navigate to folder with sql file.
 3. Choose "Default Target Schema" "New" and type name "exc2".
 4. Press Start Import.
