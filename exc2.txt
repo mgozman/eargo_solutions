@@ -1,0 +1,28 @@
+Exercise 2:
+Write an SQL Statement to transform data from Input to output format. Input and output table are provided below.
+
+Under output table format you need to replace ?? with actual record counts while submitting your answers.
+
+
+Instruction on how to execute code with different test cases:
+
+1. Open Workbench and click Server -> Data Import.
+2. Click import from Disk and navigate to folder with sql file.
+3. Choose "Default Target Schema" "New" and type name "exc2".
+4. Press Start Import.
+5. Update all schemas. You should see "exc2" schema and "Input_table".
+6. Double click on exc2 to make working schema.
+7. Run next sql statements:
+
+CREATE TABLE Output (Page varchar(255), counts int);
+INSERT INTO Output VALUES ('Home_Page',  (SELECT SUM(Home_page) FROM Input_table));
+INSERT INTO Output VALUES ('Product_Page',  (SELECT SUM(Product_Page) FROM Input_table));
+INSERT INTO Output VALUES ('Warranty_Page',  (SELECT SUM(Warranty_Page) FROM Input_table));
+
+Query, which doesn't create new table and make selection from Input_table:
+
+SELECT 
+   SUM(Product_page) as 'Product_page',
+   SUM(Home_page) as 'Home_page',
+   SUM(Warranty_page) as 'Warranty_page'
+FROM Input_table;
